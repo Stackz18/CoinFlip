@@ -11,13 +11,13 @@ namespace CoinFlip
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Lets flip a coin 1000 times.");
+            Console.WriteLine("Type in how many times you want to flip the coin.");
             FlippingCoin();
         }
 
         private static void FlippingCoin()
         {
-            int numberOfFlips = 1000;
+            int numberOfFlips = int.Parse(Console.ReadLine());
             int headsCount = 0;
             int tailsCount = 0;
             Random random = new Random();
@@ -33,9 +33,9 @@ namespace CoinFlip
                     tailsCount++;
                 }
             }
-            Console.WriteLine("Number of coin flips: {0}", numberOfFlips);
-            Console.WriteLine("Number of heads: {0}", headsCount);
-            Console.WriteLine("Number of tails: {0}", tailsCount);
+            Console.WriteLine("You chose to flip the coin: {0} times.", numberOfFlips);
+            Console.WriteLine("Number of heads: {0}.", headsCount);
+            Console.WriteLine("Number of tails: {0}.", tailsCount);
             Console.ReadLine();
         }
     }
